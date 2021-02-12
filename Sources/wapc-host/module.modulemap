@@ -1,0 +1,5 @@
+module wapc {
+  header "include/wapc_host.h"
+  link "wapc_host"
+  export *
+}

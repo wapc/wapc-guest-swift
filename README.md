@@ -66,3 +66,11 @@ by adding few lines to the `Packages.swift` file:
 
 [This GitHub repository](https://github.com/flavio/wapc-swift-demo) contains
 a full working example.
+
+# Call for help
+
+I'm new to Swift, I would appreciate help on the following topics from some
+more seasoned Swift develper:
+
+  * Generic code review, ensure I'm not doing something stupid
+  * Question about the API to expose, this is tracked on [this issue](https://github.com/flavio/wapc-guest-swift/issues/1)

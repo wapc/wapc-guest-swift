@@ -1,5 +1,5 @@
-#ifndef __WAPC_HOST_H__
-#define __WAPC_HOST_H__
+#ifndef __WAPC_FFI_H__
+#define __WAPC_FFI_H__
 
 #include <stdlib.h>
 #include <stdbool.h>

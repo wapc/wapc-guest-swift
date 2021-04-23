@@ -1,0 +1,5 @@
+module wapc {
+  header "include/wapc_ffi.h"
+  link "wapc_ffi"
+  export *
+}

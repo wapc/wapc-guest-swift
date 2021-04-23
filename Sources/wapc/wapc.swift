@@ -1,4 +1,4 @@
-import wapc_host
+import wapc_ffi
 import Foundation
 
 public func handleCall(operation_size: UInt, payload_size: UInt) -> Bool {
@@ -7,7 +7,7 @@ public func handleCall(operation_size: UInt, payload_size: UInt) -> Bool {
     defer {
         operationBuf.deinitialize(count: Int(operation_size) + 1)
         operationBuf.deallocate()
-    
+
         payloadBuf.deinitialize(count: Int(payload_size) + 1)
         payloadBuf.deallocate()
     }
@@ -68,7 +68,7 @@ public func hostCall(
         // Add NULL terminations
         let tailErrorBuf = errorBuf + Int(errorLen)
         tailErrorBuf.pointee = 0
-        
+
         let error = String(cString: errorBuf)
 
         consoleLog(msg: "Host error: \(error)")
@@ -100,5 +100,4 @@ public func registerFunction(name: String, fn: @escaping (String) -> String) {
     wapcFunctions[name] = fn
 }
 
-var wapcFunctions: 
-Dictionary<String, (String) -> String> = [:]
+var wapcFunctions: Dictionary<String, (String) -> String> = [:]
